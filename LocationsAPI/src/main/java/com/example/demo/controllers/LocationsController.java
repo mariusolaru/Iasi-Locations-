@@ -22,7 +22,7 @@ public class LocationsController {
         return new ResponseEntity<>(locations, org.springframework.http.HttpStatus.OK);
     }
 
-    @PostMapping
+    @GetMapping(value = "/update")
     public void updateLocations() throws IOException {
         locationsService.updateLocations();
     }
